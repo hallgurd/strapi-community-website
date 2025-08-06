@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Form() {
   return (
-    <div className="my-10 text-left space-y-5">
+    <div className="my-6 text-left space-y-4">
       <label className="block">
         <span className="after:content-['*'] text-left after:ml-0.5 after:text-danger-500 block text-sm font-medium text-neutral-700">
           Name

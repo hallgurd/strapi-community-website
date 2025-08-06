@@ -19,8 +19,8 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-10">
-      <nav className="flex justify-between items-center px-6 md:px-14 lg:px-32 h-16 bg-neutral-0/90 backdrop-blur-sm">
+    <header className="fixed top-0 inset-x-0 border-b border-b-neutral-100 z-50">
+      <nav className="flex justify-between items-center px-6 md:px-14 lg:px-32 h-16 bg-neutral-0/70 backdrop-blur-md">
         <StrapiCommunityLogo />
 
         <div className="hidden md:flex">
