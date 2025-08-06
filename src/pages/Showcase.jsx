@@ -19,7 +19,7 @@ export default function Showcase() {
   return (
     <div className="my-10">
       <div className="text-center mb-12">
-        <h1 className="text-2xl font-bold mb-4 text-darkPrimary">Showcase</h1>
+        <h1 className="font-bold text-xl mb-2 text-alternative-700 uppercase">Showcase</h1>
         <p className="text-neutral-600 ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eum dignissimos
           laudantium?
@@ -29,7 +29,7 @@ export default function Showcase() {
       <div className="flex flex-col md:flex-row flex-wrap justify-between items-center mb-8">
         <div className="mb-4 md:mb-0">
           <h1 className="text-xl font-bold text-darkPrimary inline-block mr-1">
-          Community repositories
+            Community repositories
           </h1>
           <span className="text-neutral-700">( {repos.length} )</span>
         </div>
@@ -42,11 +42,11 @@ export default function Showcase() {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center sm:justify-between">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
         {repos.map((repo) => (
           <div
             key={repo.id}
-            className="bg-primary-100 max-w-sm w-96 p-5 mb-10 rounded flex flex-col justify-between"
+            className="bg-primary-100 p-5 rounded-xl flex flex-col justify-between"
           >
             <div className="mb-4">
               <a href={repo.html_url}>
@@ -57,9 +57,9 @@ export default function Showcase() {
 
             <div className="mt-4 flex flex-row items-center justify-between text-neutral-700">
               <p className="flex items-center">
-                  <img src={FileCode} alt="FileCode" className="w-5 mr-0.5" />
-                  {repo.language}
-                </p>
+                <img src={FileCode} alt="FileCode" className="w-5 mr-0.5" />
+                {repo.language}
+              </p>
               <div className="flex space-x-4">
                 <p className="flex items-center">
                   <img src={GitStar} alt="Star" className="w-5 mr-0.5" />

@@ -23,12 +23,22 @@ export default function Bounty() {
       prize: "200",
       html_url: "",
     },
+    {
+      id: 3,
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab perferendis voluptas repudiandae",
+      tag: "Tag",
+      image: "",
+      prize: "500",
+      html_url: "",
+    },
   ]);
 
   return (
     <div className="my-10">
       <div className="text-center mb-12">
-        <h1 className="text-2xl font-bold mb-4 text-darkPrimary">bounties</h1>
+        <h1 className="font-bold text-xl mb-2 text-alternative-700 uppercase">Bounties</h1>
         <p className="text-neutral-600 ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eum dignissimos
           laudantium?
@@ -51,11 +61,11 @@ export default function Bounty() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center gap-8">
         {bounties.map((bounty) => (
           <div
             key={bounty.id}
-            className="w-full p-6 mb-4 bg-white rounded shadow overflow-hidden"
+            className="w-full p-6 bg-neutral-100/30 rounded-xl overflow-hidden border border-neutral-200"
           >
             <div className="sm:flex">
               <div className="flex justify-center mb-6 sm:mb-0 sm:mr-6">
@@ -66,14 +76,16 @@ export default function Bounty() {
                 />
               </div>
 
-              <div className="text-left sm:w-3/4">
-                <Link
-                  to={`/bounty/${bounty.id}`}
-                  className="inline-block text-lg leading-tight font-medium text-black hover:underline"
-                >
-                  <h2 className="text-lg font-bold text-darkPrimary">{bounty.title}</h2>
-                </Link>
-                <p className="mt-2 text-slate-500">{bounty.description}</p>
+              <div className="text-left sm:w-3/4 flex flex-col justify-between">
+                <div>
+                  <Link
+                    to={`/bounty/${bounty.id}`}
+                    className="inline-block leading-tight font-medium text-black hover:underline"
+                  >
+                    <h2 className="text-xl font-bold text-darkPrimary">{bounty.title}</h2>
+                  </Link>
+                  <p className="mt-2 text-neutral-600">{bounty.description}</p>
+                </div>
 
                 <div className="mt-5 flex justify-between">
                   <span className="p-2 bg-neutral-100 rounded">#{bounty.tag}</span>
